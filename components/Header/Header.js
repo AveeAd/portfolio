@@ -27,9 +27,9 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/about">
+            <ScrollLink to="about" spy={true} smooth={true}>
               <FaInfoCircle className="text-2xl hover:text-pink-600 cursor-pointer" />
-            </Link>
+            </ScrollLink>
           </li>
           <li>
             <ScrollLink to="footer" spy={true} smooth={true}>

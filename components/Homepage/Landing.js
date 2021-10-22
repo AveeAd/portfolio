@@ -5,7 +5,7 @@ const Landing = () => {
   return (
     <div
       id="landing"
-      className={`${styles.landing} relative flex justify-center items-center h-screen bg-gray-700 mt-24 md:mt-12`}
+      className={`${styles.landing} relative flex justify-center items-center h-screen  mt-24 md:mt-12`}
     >
       <img className="object-center" src="/images/programming.svg" alt="" />
       <div

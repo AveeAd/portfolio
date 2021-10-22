@@ -1,6 +1,18 @@
 .landing {
   min-width: fit-content;
   min-height: fit-content;
+  background: linear-gradient(to bottom right, #4f46e5, #db2777);
+}
+
+.landing::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 100px solid transparent;
+  border-bottom: 80px solid white;
+  bottom: -17px;
+  left: 20vh;
 }
 
 .overlay {

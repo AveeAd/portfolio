@@ -1,5 +1,6 @@
 import Header from "../components/Header/Header";
 import Landing from "../components/Homepage/Landing";
+import About from "../components/Homepage/About";
 import Footer from "../components/Footer/Footer";
 import Head from "next/head";
 
@@ -13,6 +14,7 @@ const Homepage = () => {
       <Header />
       <main>
         <Landing />
+        <About />
       </main>
       <Footer />
     </div>

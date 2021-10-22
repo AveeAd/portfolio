@@ -6,6 +6,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -34,12 +35,24 @@ const Footer = () => {
             <p>Kathmandu, Nepal</p>
           </div>
           <div className="flex space-x-4 text-3xl my-4">
-            <FaFacebookF />
-            <FaInstagram />
-            <FaLinkedinIn />
-            <FaGithub />
-            <FaTwitter />
-            <FaYoutube />
+            <Link href="http://www.facebook.com/avee.ad">
+              <FaFacebookF className="cursor-pointer" />
+            </Link>
+            <Link href="https://www.instagram.com/ave_ad/">
+              <FaInstagram className="cursor-pointer" />
+            </Link>
+            <Link href="https://www.linkedin.com/in/avee-ad/">
+              <FaLinkedinIn className="cursor-pointer" />
+            </Link>
+            <Link href="https://www.github.com/aveead">
+              <FaGithub className="cursor-pointer" />
+            </Link>
+            <Link href="https://twitter.com/avee_ad">
+              <FaTwitter className="cursor-pointer" />
+            </Link>
+            <Link href="https://www.youtube.com/channel/UCnFzwZATv0rWufvOYeShpfg">
+              <FaYoutube className="cursor-pointer" />
+            </Link>
           </div>
         </div>
       </div>
