@@ -1,0 +1,9 @@
+.landing {
+  min-width: fit-content;
+  min-height: fit-content;
+}
+
+.overlay {
+  height: calc(100% - 4rem);
+  width: 100%;
+}
