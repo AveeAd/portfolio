@@ -7,12 +7,12 @@
 .landing::after {
   content: "";
   position: absolute;
-  width: 100px;
-  height: 100px;
-  border: 100px solid transparent;
-  border-bottom: 80px solid white;
+  width: 1px;
+  height: 1px;
+  border: 8vw solid transparent;
+  border-bottom: 10vw solid white;
   bottom: -17px;
-  left: 20vh;
+  left: 20vw;
 }
 
 .overlay {

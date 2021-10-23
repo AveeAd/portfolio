@@ -1,11 +1,22 @@
-import Header from "../../components/Header/Header";
-
+import Layout from "../../components/ExploreComponents/Layout";
+import Container from "../../components/ExploreComponents/Container";
+import Card from "../../components/ExploreComponents/Card";
 const index = () => {
   return (
-    <main className="flex justify-center items-center h-screen">
-      <Header />
-      <p className="text-black font-medium text-lg">On Progress</p>
-    </main>
+    <Layout>
+      <Container>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </Container>
+    </Layout>
   );
 };
 
