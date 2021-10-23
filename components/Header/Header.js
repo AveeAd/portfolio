@@ -17,25 +17,24 @@ const Header = () => {
           <li>
             <Link href="/">
               <ScrollLink to="landing" spy={true} smooth={true}>
-                <FaHome className="text-2xl hover:text-pink-600 cursor-pointer " />
+                <FaHome className="text-2xl active:text-pink-600 cursor-pointer " />
               </ScrollLink>
             </Link>
+          </li>
+          <li>
+            <ScrollLink to="about" spy={true} smooth={true}>
+              <FaInfoCircle className="text-2xl active:text-pink-600 cursor-pointer" />
+            </ScrollLink>
           </li>
           <li>
             <Link href="/explore">
-              <FaCompass className="text-2xl hover:text-pink-600 cursor-pointer" />
+              <FaCompass className="text-2xl active:text-pink-600 cursor-pointer" />
             </Link>
           </li>
-          <li>
-            <Link href="/">
-              <ScrollLink to="about" spy={true} smooth={true}>
-                <FaInfoCircle className="text-2xl hover:text-pink-600 cursor-pointer" />
-              </ScrollLink>
-            </Link>
-          </li>
+
           <li>
             <ScrollLink to="footer" spy={true} smooth={true}>
-              <FaUserAlt className="text-2xl hover:text-pink-600 cursor-pointer" />
+              <FaUserAlt className="text-2xl active:text-pink-600 cursor-pointer" />
             </ScrollLink>
           </li>
         </ul>

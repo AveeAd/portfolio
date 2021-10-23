@@ -2,7 +2,7 @@ import Layout from "../../components/ExploreComponents/Layout";
 import Container from "../../components/ExploreComponents/Container";
 import Card from "../../components/ExploreComponents/Card";
 import Head from "next/head";
-const index = () => {
+const BlogsPage = () => {
   return (
     <Layout>
       <Head>
@@ -24,4 +24,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default BlogsPage;
