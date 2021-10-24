@@ -2,26 +2,53 @@ import Layout from "../../components/ExploreComponents/Layout";
 import Container from "../../components/ExploreComponents/Container";
 import Card from "../../components/ExploreComponents/Card";
 import Head from "next/head";
-const BlogsPage = () => {
+import axios from "axios";
+const BlogsPage = (props) => {
+  const { blogs } = props;
+  if (!blogs) {
+    return (
+      <Layout>
+        <Head>
+          <title>Blogs | Kumar Adhikari</title>
+        </Head>
+        <Container>
+          <p>Data Not Found Please Reload!!!</p>
+        </Container>
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <Head>
         <title>Blogs | Kumar Adhikari</title>
       </Head>
       <Container>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {blogs.map((blog) => (
+          <Card key={blog.id} blog={blog} />
+        ))}
       </Container>
     </Layout>
   );
 };
+
+export async function getStaticProps() {
+  const data = await axios.get("http://localhost:5000/blogs");
+  let blogs = [];
+  if (data.data.success) {
+    for (let i in data.data.blogs) {
+      blogs.push({
+        id: data.data.blogs[i]._id,
+        title: data.data.blogs[i].title,
+        image: data.data.blogs[i].contents[0].image,
+        date: data.data.blogs[i].publshedDate,
+      });
+    }
+  }
+  return {
+    props: {
+      blogs,
+    },
+  };
+}
 
 export default BlogsPage;
