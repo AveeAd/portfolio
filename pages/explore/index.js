@@ -3,20 +3,7 @@ import Container from "../../components/ExploreComponents/Container";
 import Card from "../../components/ExploreComponents/Card";
 import Head from "next/head";
 import axios from "axios";
-const BlogsPage = (props) => {
-  const { blogs } = props;
-  if (!blogs) {
-    return (
-      <Layout>
-        <Head>
-          <title>Blogs | Kumar Adhikari</title>
-        </Head>
-        <Container>
-          <p>Data Not Found Please Reload!!!</p>
-        </Container>
-      </Layout>
-    );
-  }
+const BlogsPage = ({ blogs }) => {
   return (
     <Layout>
       <Head>
@@ -24,7 +11,7 @@ const BlogsPage = (props) => {
       </Head>
       <Container>
         {blogs.map((blog) => (
-          <Card key={blog.id} blog={blog} />
+          <Card key={blog.id} detail={blog} />
         ))}
       </Container>
     </Layout>
@@ -44,6 +31,7 @@ export async function getStaticProps() {
       });
     }
   }
+
   return {
     props: {
       blogs,
